@@ -3,7 +3,7 @@
       <div class="card-header">Tutorials</div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" *ngFor="let tutorial of tutorials | async">Name: {{tutorial.name}} | Url: {{tutorial.url}}</li>
+          <li class="list-group-item" *ngFor="let tutorial of tutorials | async; let i = index;">Name: {{tutorial.name}} | Url: {{tutorial.url}} <span class="float-right btn btn-danger" (click)="delete(i)">Remove</span></li>
         </ul>
       </div>
     </div>

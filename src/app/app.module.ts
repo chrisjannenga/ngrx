@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TutorialReadComponent } from './tutorial/tutorial-read/tutorial-read.component';
 import { TutorialCreateComponent } from './tutorial/tutorial-create/tutorial-create.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { TutorialCreateComponent } from './tutorial/tutorial-create/tutorial-cre
     StoreModule.forRoot({
       tutorial: reducer
     }),
-    NgbModule
+    NgbModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
