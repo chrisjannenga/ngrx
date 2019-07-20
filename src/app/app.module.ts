@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { StoreModule } from '@ngrx/store';
-import { reducer } from './reducers/tutorial.reducer';
+import { tutorialReducer } from './reducers/tutorial.reducer';
+import { userReducer } from './reducers/user.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      tutorial: reducer
+      tutorial: tutorialReducer,
+      user: userReducer
     }),
     NgbModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
