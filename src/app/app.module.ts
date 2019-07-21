@@ -12,12 +12,18 @@ import { TutorialReadComponent } from './tutorial/tutorial-read/tutorial-read.co
 import { TutorialCreateComponent } from './tutorial/tutorial-create/tutorial-create.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CallbackComponent } from './callback/callback.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TutorialReadComponent,
-    TutorialCreateComponent
+    TutorialCreateComponent,
+    NavbarComponent,
+    CallbackComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
